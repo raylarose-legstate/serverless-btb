@@ -13,17 +13,14 @@ import { TopCarouselComponent } from './top-carousel/top-carousel.component';
 
 import { HttpClientModule } from "@angular/common/http";
 
-import { NgxMaskModule, IConfig } from 'ngx-mask'
+import { NgxMaskModule } from 'ngx-mask'
 import { MatNativeDateModule } from "@angular/material/core";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { HomeComponent } from './home/home.component';
 import { ScheduleComponent } from './schedule/schedule.component';
-import { RulesComponent } from './rules/rules.component';
-import { CoachesComponent } from './coaches/coaches.component';
+import { HeaderComponent } from './header/header.component';
  
-// export const options: Partial<IConfig> | (() => Partial<IConfig>);
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,8 +28,7 @@ import { CoachesComponent } from './coaches/coaches.component';
     TopCarouselComponent,
     HomeComponent,
     ScheduleComponent,
-    RulesComponent,
-    CoachesComponent
+    HeaderComponent
   ],
   imports: [
     BrowserAnimationsModule,

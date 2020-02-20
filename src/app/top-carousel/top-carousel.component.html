@@ -5,7 +5,7 @@
   color="accent"
   maxWidth="auto"
   [maintainAspectRatio]="false"
-  slideHeight="400px"
+  slideHeight="650px"
   [hideIndicators]="true"
   [loop]="true"
   [hideArrows]="false"
@@ -20,9 +20,9 @@
     overlayColor="#00000040"
     [hideOverlay]="false"
   >
-    <div class="carousel-caption hidden-xs" [hidden]="!slide.title && !slide.description">
-      <h4 [innerHtml]="slide.title"></h4>
-      <p [innerHtml]="slide.description"></p>                
+    <div class="carousel-caption hidden-xs" [hidden]="!slide.title && !slide.options.htmlFragment">
+      <h2 [innerHtml]="slide.title"></h2>
+      <p [innerHtml]="slide.options.htmlFragment"></p>                
     </div>
   </mat-carousel-slide>
 </mat-carousel>
