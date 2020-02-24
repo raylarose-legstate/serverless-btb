@@ -4,7 +4,10 @@ module.exports.mailer = async event => {
 
   const referer = event.headers.referer || event.headers.Referer;
 
-  if (!referer.match(/192\.168|beyondthebelt/i)) return { statusCode: 403 };
+  if (!referer.match(/192\.168|btbmartialarts.com/i)) {
+    console.log("Unauthorized request; bailing out.");
+    return { statusCode: 403 };
+  }
 
   const payload = JSON.parse(event.body).data;
   const sgMail = require('@sendgrid/mail');
@@ -12,7 +15,8 @@ module.exports.mailer = async event => {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   
   const msg = {
-    to: ['info@btbmartialarts.com'],
+    // to: ['info@btbmartialarts.com'],
+    to: ['switch120@gmail.com'],
     from: 'noreply@aethercode.com',
     subject: 'New contact request received',
     html: '<strong>You have received a new contact request:</strong><br /><ul>' + Object.keys(payload).map(k => {

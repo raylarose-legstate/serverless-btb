@@ -15,7 +15,7 @@
             <div class="clearfix visible-sm"></div>
             <div class="col-md-4">
               <p class="mt-10">
-                <a href scroll-to="contact" offset="125" class="btn btn-animated btn-lg btn-gray-transparent ">
+                <a href="#contact" offset="125" class="btn btn-animated btn-lg btn-gray-transparent ">
                   <!-- Begin Editable Call to Action Text -->
 
                   Make a Reservation
@@ -91,3 +91,179 @@
   </div>
 </section>
 <!-- End Welcome Section -->
+<section id="events" class="parallax">
+  <div class="dark-translucent-bg">
+    <div class="container">
+      <div class="row" ng-controller="EventsController as articlesCtl">
+        <div class="col-lg-12 form-horizontal"><br />
+          <h1 class="page-title text-center">
+
+            <!-- Editable Title -->
+            <i class="fa fa-fw fa-newspaper-o pull-left"></i> THE BTB BLOG</h1>
+          <!-- End editable title -->
+
+          <hr class="tagline-divider">
+          <p class="lead">
+
+            <!-- Editable Intro Paragraph -->
+            Check back to this page for posts about training, events, and happenings at the dojo!
+            <!-- End intro paragraph -->
+
+          </p>
+          <div class="clearfix"></div>
+          <app-articles [data]="blogPosts"></app-articles>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="staff" class="default-bg">
+  <div class="">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 form-horizontal"><br />
+          <h1 class="page-title text-center">
+
+            <!-- Editable Title -->
+            <i class="fa fa-fw fa-group pull-left"></i> BTB Staff</h1>
+          <!-- End title -->
+
+          <hr class="tagline-divider">
+          <p class="lead">
+
+            <!-- Editable intro text -->
+            When Sensei Carl Young opened the doors of Beyond the Belt back in 2010, he was on a mission to change the vision of martial arts. Instead of focusing on competitive striking and self defense work, he wanted to create a community of families set on bettering
+            themselves not simply through self defense, but through character building and virtues. In a world where martial arts can easily become something for oneself only, Sensei Carl seeks to teach students that through martial
+            arts, each person has the opportunity to lead and empower each other. Truly, martial arts can go far beyond punches and kicks, organically providing a way for kids and adults alike to better themselves. At Beyond the
+            Belt, it is Sensei Carl's and his team of instructors' mission to teach the very latest techniques, inspirations, and values of martial arts in and beyond the dojo. Don't wait- join the movement today!
+            <!-- end intro text -->
+
+          </p>
+          <div class="clearfix"></div>
+          <app-instructors></app-instructors>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-schedule></app-schedule>
+<section id="programs" class="dark-bg">
+  <div class="x-dark-translucent-bg">
+    <div class="container">
+      <div class="row" ng-controller="ProgramsController as articlesCtl">
+        <div class="col-lg-12 form-horizontal"><br />
+          <h1 class="page-title text-center">
+
+            <!-- Editable title-->
+            <i class="fa fa-fw fa-graduation-cap pull-left"></i> Programs We Offer</h1>
+          <!-- end title -->
+
+          <hr class="tagline-divider">
+          <p class="lead">
+            <!-- Editable intro text -->
+            Programs at our facility are designed to build mind, body, and character through martial arts training. See below for the scheduling of our many programs!
+            <!-- end intro text -->
+          </p>
+          <div class="clearfix"></div>
+          <app-articles [data]="programs"></app-articles>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="contact">
+  <section class=""><br />
+
+    <!-- Facebook API -->
+    <div id="fb-root"></div>
+    <script>
+      (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=211137285649896&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <!-- Facebook API end -->
+
+    <!-- <footer> -->
+    <!-- <div class="footer"> -->
+
+    <!-- <div class="col-map"> -->
+    <!--<h2 class="brand-before text-center">
+            <small><span class="fa-stack fa-2x">
+                <i class="fa fa-circle-o fa-stack-2x"></i>
+                <i class="fa fa-map-marker fa-stack-1x"></i>
+              </span></small> How to find us!
+          </h2>-->
+    <!-- </div> -->
+    <!-- End Map Section -->
+
+    <div class="container">
+      <!-- <div class="footer-inner"> -->
+      <div class="row">
+        <div class="col-sm-6 col-xs-10 col-xs-offset-1 col-sm-offset-0">
+          <div class="" data-animation-effect="slideInLeft">
+            <app-contact></app-contact>
+          </div>
+        </div>
+        <div class="col-sm-5 col-sm-offset-1 col-md-offset-0 col-xs-10 col-xs-offset-1">
+          <div class="" data-animation-effect="slideInRight">
+            <p>
+              <b class="text-red">HEADQUARTERS </b><br><br />
+              <!-- businessAddress populated from Backend DB (Settings) -->
+              77 Court St. Laconia, NH 03246
+              <!-- -->
+            </p>
+            <dl>
+              <dt>Hours of Operation</dt>
+              <dd>Mon-Thu: 3:30PM – 8PM<br /> Fri: 4:00PM – 6:30PM<br /> Sat: Varies, check with instructor<br />
+                <br />
+                <i class="fa fa-fw fa-phone"></i> 603.366.1044
+              </dd>
+            </dl>
+            <dl>
+              <dt>Directions from the North</dt>
+              <dd>
+                Take US-3 South to NH 106. Turn right onto Veterans Sq/NH-106. Continue to follow NH-106. Turn right onto S Main St/NH-106. Take the first right into Court Street.
+              </dd>
+            </dl>
+            <dl>
+              <dt>Directions from the South</dt>
+              <dd>
+                Take US-3 North. Court Street will be on the left.
+              </dd>
+            </dl>
+            <dl>
+              <dt>Parking</dt>
+              <dd>
+                Limited parking is available in the lot adjacent to the building, and additional parking is available in the lot down behind Walgreens.
+              </dd>
+            </dl>
+          </div>
+
+          <!-- Insert FB Box (API) -->
+          <div class="fb-page" data-width="500" data-href="https://www.facebook.com/beyond.the.belt" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"></div>
+          <!-- end FB API-->
+
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- </footer> -->
+  </section>
+</section>
+<div class="subfooter">
+  <div class="container">
+    <div class="subfooter-inner">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="text-center">Copyright © {{ year }} Beyond the Belt. All Rights Reserved</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

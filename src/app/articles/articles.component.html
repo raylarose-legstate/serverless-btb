@@ -1,0 +1,49 @@
+<section>
+  <div class="animated fadeIn" [hidden]="selected">
+    <div class="col-xs-6 col-md-4" *ngFor="let article of data">
+      <div class="image-box style-2 mb-20">
+        <div class="overlay-container overlay-visible">
+          <a href="javascript:void(0)" (click)="selected = article">
+            <img class="img img-responsive" width="100%" [src]="article.headerImageUrl" alt="" />
+            <div class="overlay-bottom">
+              <div class="text">
+                <p class="lead margin-clear text-left">{{article.title}}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="body padding-horizontal-clear">
+        <p>{{article.blurb}}</p>
+        <a class="link-dark" href="javascript:void(0)" (click)="selected = article">Read More<i class="pl-5 fa fa-angle-double-right"></i></a>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <!-- <ol ng-if="widgetCtl.allArticles.length > widgetCtl.displayCount" class="breadcrumb object-non-visible animated" data-animation-effect="fadeIn" data-effect-delay="2s">
+      <li class="pull-right"><a href ng-click="widgetCtl.displayCount = widgetCtl.displayCount + 3">Load more articles</a> <i class="fa fa-fw fa-plus-circle"></i></li>
+    </ol> -->
+  </div>
+  <div class="widget-article" *ngIf="selected">
+    <div class="animated zoomInUp">
+      <ol class="breadcrumb animated">
+        <li><a href="javascript:void(0)" (click)="selected = null">All Articles</a></li>
+        <li class="active">{{selected.title}}</li>
+      </ol>
+      <div class="widget-article-header">
+        <h1>{{selected.title}}</h1>
+        <h4 class="text-muted">{{selected.blurb}}</h4>
+        <hr class="tagline-divider">
+        <div class="container">
+          <div class="col-md-8">
+            <div class="widget-article-body" [innerHTML]="selected.content"></div>
+          </div>
+          <div class="col-md-4">
+            <img class="img img-thumbnail img-rounded img-responsive" width="100%" [src]="selected.headerImageUrl" alt="" />
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="widget-article-footer"></div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -39,15 +39,22 @@ custom:
     host: 0.0.0.0       # localhost will not work in Vagrant, so bind to 0.0.0.0
     port: 3000          # default
 
+package:
+  exclude:
+    - node_modules/**
+    - src/**
+    - dist/**
+    - .vagrant
+
 # environment:
 #    variable1: value1
 
 functions:
   formMailer:
-    handler: handler.mailer
+    handler: api/handler.mailer
     events:
      - http:
-         path: form/mail
+         path: api/form/mail
          method: post
          cors: true
 

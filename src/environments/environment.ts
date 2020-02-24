@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  mailer_endpoint: "/form/mail"
+  mailer_endpoint: "/api/form/mail"
 };
 
 /*

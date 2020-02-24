@@ -4,20 +4,29 @@
     <p>We will be in touch shortly.</p>
   </div>
   <div class="panel form-horizontal" [hidden]="submitted">
-    <h1>Contact Us!</h1>
+    <h2 class="brand-before">
+
+      <!-- Editable title -->
+      Contact <strong>Us</strong>
+      <!-- end title -->
+
+    </h2>
+    <div class="separator"></div><br />
     <p>
-      Got a question or concern? Let us know, we'd be happy to answer. Don't forget you are always welcome to stop by the box during any of our normal training sessions and observe the in session class.&nbsp;
+
+      <!-- Editable Contact text -->
+      Located at 77 Court Street in Downtown Laconia, our state of the art facility features 2 full size dojos, a spacious, well lit lobby, and 3 different changing rooms. Stadium seating is available for Dojo A, while Dojo B features wrap around seating that
+      allows parents and guests to watch classes comfortably. In addition, we also sport a large selection of Beyond the Belt merchandise and training gear in our Pro Shop! Don't wait! Come check out our facility
+      TODAY!
+      <!-- End text edit -->
+
     </p>
-    <p>
-      We look forward to hearing from you!
-    </p>
-    <hr>
-    <form #myform = "ngForm" (ngSubmit) = "onSubmit(myform)" >
+    <form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
       <fieldset>
         <div class="form-group">
           <label for="full_name" class="col-md-3 control-label">Your full name:</label>
           <div class="col-md-8 input-group">
-            <input tabindex="1" name="full_name" type="text" placeholder="John Doe" class="form-control" required min-length="5"  ngModel>
+            <input tabindex="1" name="full_name" type="text" placeholder="John Doe" class="form-control" required min-length="5" ngModel>
           </div>
         </div>
 
@@ -27,16 +36,24 @@
             <input tabindex="2" name="email" type="email" placeholder="someone@example.com" class="form-control" required ngModel email>
           </div>
         </div>
+
+        <div class="form-group">
+          <label for="full_name" class="col-md-3 control-label">Contact Phone:</label>
+          <div class="col-md-8 input-group">
+            <input tabindex="3" name="contact_phone" type="text" mask="(000) 000-0000" placeholder="(000) 000-0000" class="form-control" required min-length="5" ngModel>
+          </div>
+        </div>
+
         <div class="form-group">
           <label for="message" class="col-md-3 control-label">Question:</label>
           <div class="col-md-8 input-group">
-            <textarea tabindex="18" class="form-control" name="message" placeholder="" rows="4" required ngModel></textarea>
+            <textarea tabindex="4" class="form-control" name="message" placeholder="" rows="4" required ngModel></textarea>
           </div>
         </div>
         <div class="form-group">
           <div class="col-sm-12 text-center">
             <hr>
-            <button tabindex="19" type="submit" class="btn btn-primary btn-lg" [disabled]="!myform.valid"><i class="fa fa-fw fa-send"></i> Send!</button>
+            <button tabindex="5" type="submit" class="btn btn-primary btn-lg" [disabled]="!myform.valid"><i class="fa fa-fw fa-send"></i> Send!</button>
           </div>
         </div>
       </fieldset>

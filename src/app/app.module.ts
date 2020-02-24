@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 
 import { MatCarouselModule } from '@ngmodule/material-carousel';
-import { MatDatepickerModule} from '@angular/material/datepicker';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { TopCarouselComponent } from './top-carousel/top-carousel.component';
 
@@ -20,7 +20,10 @@ import { MatInputModule } from "@angular/material/input";
 import { HomeComponent } from './home/home.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { HeaderComponent } from './header/header.component';
- 
+import { ArticlesComponent } from './articles/articles.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { InstructorsComponent } from './instructors/instructors.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +31,9 @@ import { HeaderComponent } from './header/header.component';
     TopCarouselComponent,
     HomeComponent,
     ScheduleComponent,
-    HeaderComponent
+    HeaderComponent,
+    ArticlesComponent,
+    InstructorsComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -40,7 +45,8 @@ import { HeaderComponent } from './header/header.component';
     MatFormFieldModule,
     MatCarouselModule.forRoot(),
     MatDatepickerModule,
-    NgxMaskModule.forRoot()
+    NgxMaskModule.forRoot(),
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

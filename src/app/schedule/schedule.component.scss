@@ -1,0 +1,21 @@
+#schedule {
+  padding-top: 15px;
+  
+  section.days {
+    display: flex;
+    justify-content: space-around;
+
+    > div {
+      margin: 5px 10px;
+      width: 100%;
+    }
+
+    .schedule-day span {
+      margin-bottom: 2px;
+    }
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+}

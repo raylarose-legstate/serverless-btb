@@ -1,0 +1,64 @@
+<ng-template #instTemplate let-staff>
+  <a href="javascript:void(0)" (click)="selected = staff">
+    <div class="image-box shadow text-center mb-20 animated flipInX">
+      <div class="overlay-container overlay-visible">
+        <img [src]="staff.options.headerImageUrl" alt="">
+        <div class="overlay-bottom">
+          <div class="text">
+            <strong class="lead">{{staff.title}}</strong><br />
+            <strong class="text-orange margin-clear">{{staff.options.blurb}}</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+</ng-template>
+<section [hidden]="selected">
+  <h3 class="text-center">BTB Owners</h3>
+  <section class="staff">
+    <div *ngFor="let staff of owners">
+      <ng-container *ngTemplateOutlet='instTemplate; context: { $implicit: staff }'></ng-container>
+    </div>
+  </section>
+  <h3 class="text-center">Head Instructors</h3>
+  <section class="staff">
+    <div *ngFor="let staff of headInstructors">
+      <ng-container *ngTemplateOutlet='instTemplate; context: { $implicit: staff }'></ng-container>
+    </div>
+  </section>
+  <!-- <h3 class="text-center">Directors</h3>
+  <section>
+    <div *ngFor="let staff of directors">
+      <ng-container *ngTemplateOutlet='instTemplate; context: { $implicit: staff }'></ng-container>
+    </div>
+  </section> -->
+  <h3 class="text-center">Instructors</h3>
+  <section class="staff">
+    <div *ngFor="let staff of instructors">
+      <ng-container *ngTemplateOutlet='instTemplate; context: { $implicit: staff }'></ng-container>
+    </div>
+  </section>
+</section>
+<section *ngIf="selected">
+  <h3 [innerHTML]="selected.caption"></h3>
+  <div class="instructor-long">
+    <div class="container-fluid animated slideInRight">
+      <div class="row">
+        <div class="col-xs-8">
+          <button id="instr-top" class="btn btn-xs btn-info btn-animated animated slideInLeft" (click)="selected=null"><i class="fa fa-fw fa-arrow-circle-left"></i> Back</button><br /><br />
+          <div [innerHTML]="selected.options.content"></div>
+        </div>
+        <div class="col-xs-4">
+          <img class="img img-responsive img-thumbnail" [src]="selected.options.headerImageUrl" alt=""><br /><br />
+          <div class="body">
+            <h3 class="title margin-clear" [innerHTML]="selected.title"></h3>
+            <div class="separator-2 mt-10"></div>
+            <p [innerHTML]="selected.options.blurb"></p>
+            <div [innerHTML]="selected.options.customContent"></div>
+          </div>
+          <br /><br />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
