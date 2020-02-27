@@ -15,8 +15,7 @@ module.exports.mailer = async event => {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
   
   const msg = {
-    // to: ['info@btbmartialarts.com'],
-    to: ['switch120@gmail.com'],
+    to: ["mlacaillade@hotmail.com"],
     from: 'noreply@aethercode.com',
     subject: 'New contact request received',
     html: '<strong>You have received a new contact request:</strong><br /><ul>' + Object.keys(payload).map(k => {

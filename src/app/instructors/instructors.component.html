@@ -2,11 +2,11 @@
   <a href="javascript:void(0)" (click)="selected = staff">
     <div class="image-box shadow text-center mb-20 animated flipInX">
       <div class="overlay-container overlay-visible">
-        <img [src]="staff.options.headerImageUrl" alt="">
+        <img [src]="staff.headerImageUrl" alt="">
         <div class="overlay-bottom">
           <div class="text">
             <strong class="lead">{{staff.title}}</strong><br />
-            <strong class="text-orange margin-clear">{{staff.options.blurb}}</strong>
+            <strong class="text-orange margin-clear">{{staff.blurb}}</strong>
           </div>
         </div>
       </div>
@@ -46,15 +46,15 @@
       <div class="row">
         <div class="col-xs-8">
           <button id="instr-top" class="btn btn-xs btn-info btn-animated animated slideInLeft" (click)="selected=null"><i class="fa fa-fw fa-arrow-circle-left"></i> Back</button><br /><br />
-          <div [innerHTML]="selected.options.content"></div>
+          <div [innerHTML]="selected.content"></div>
         </div>
         <div class="col-xs-4">
-          <img class="img img-responsive img-thumbnail" [src]="selected.options.headerImageUrl" alt=""><br /><br />
+          <img class="img img-responsive img-thumbnail" [src]="selected.headerImageUrl" alt=""><br /><br />
           <div class="body">
             <h3 class="title margin-clear" [innerHTML]="selected.title"></h3>
             <div class="separator-2 mt-10"></div>
-            <p [innerHTML]="selected.options.blurb"></p>
-            <div [innerHTML]="selected.options.customContent"></div>
+            <p [innerHTML]="selected.blurb"></p>
+            <div [innerHTML]="selected.customContent"></div>
           </div>
           <br /><br />
         </div>
