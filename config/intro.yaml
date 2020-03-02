@@ -1,0 +1,21 @@
+cta: |
+  <a href="#contact" class="btn btn-animated btn-lg btn-gray-transparent ">
+    Make a Reservation
+    <i class="fa fa-envelope pl-20"></i>
+  </a>
+header: A New Way <strong class="text-info">To Train</strong>
+intro: |
+  Located in the <strong>Lakes Region of New Hampshire</strong>, <span class="text-red">Beyond the Belt</span> is a family focused school teaching the very latest martial arts techniques. Our Adult Mixed Martial Arts
+  Program is one of the only belt-ranked MMA programs in the state. We feature Brazilian Jiu Jitsu, Muay Thai Kickboxing, and traditional Kempo Karate training. Our Martial Arts Leadership Program for children not
+  only teaches valuable Martial Arts techniques and skills, but also life skills, self defense, and character development. Our calorie burning K-Box Fitness Program is one of the most effective and enjoyable ways
+  to get in shape or take your cardio fitness to the next level!
+  <br />
+  Whether you're looking for yourself or your children, whether you have a black belt or have never set foot in a karate studio before, come visit us at Beyond the Belt and see what we're all about!
+rightImageUrl: https://aethercode-btbmartialarts.s3.amazonaws.com/assets/contentPages/1/image-gallery/564253a39d708.jpg
+rightList: |
+  <ul class="list-icons ph-30">
+    <li><i class="fa fa-fw fa-map-marker"></i> Located in <strong>Laconia</strong></li>
+    <li><i class="fa fa-fw fa-star"></i> Community focused, belt-ranked martial arts programs</li>
+    <li><i class="fa fa-fw fa-group"></i> Experienced and <strong class="text-info">passionate</strong> instructors</li>
+    <li><i class="fa fa-fw fa-heartbeat"></i> Safe and welcoming for all walks of life</li>
+  </ul>

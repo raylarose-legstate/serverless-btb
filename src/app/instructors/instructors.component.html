@@ -13,14 +13,19 @@
     </div>
   </a>
 </ng-template>
+<br />
+<h1 class="page-title text-center" [innerHTML]="cfg.header"></h1>
+<hr class="tagline-divider">
+<p class="lead" [innerHTML]="cfg.intro"></p>
+<div class="clearfix"></div>
 <section [hidden]="selected">
-  <h3 class="text-center">BTB Owners</h3>
+  <h3 class="text-center" [innerHTML]="cfg.ownerHeader"></h3>
   <section class="staff">
     <div *ngFor="let staff of owners">
       <ng-container *ngTemplateOutlet='instTemplate; context: { $implicit: staff }'></ng-container>
     </div>
   </section>
-  <h3 class="text-center">Head Instructors</h3>
+  <h3 class="text-center" [innerHTML]="cfg.headInstructorHeader"></h3>
   <section class="staff">
     <div *ngFor="let staff of headInstructors">
       <ng-container *ngTemplateOutlet='instTemplate; context: { $implicit: staff }'></ng-container>
@@ -32,7 +37,7 @@
       <ng-container *ngTemplateOutlet='instTemplate; context: { $implicit: staff }'></ng-container>
     </div>
   </section> -->
-  <h3 class="text-center">Instructors</h3>
+  <h3 class="text-center" [innerHTML]="cfg.instructorHeader"></h3>
   <section class="staff">
     <div *ngFor="let staff of instructors">
       <ng-container *ngTemplateOutlet='instTemplate; context: { $implicit: staff }'></ng-container>

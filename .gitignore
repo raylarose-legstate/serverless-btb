@@ -4,6 +4,8 @@
 .serverless
 .env
 
+src/compiled-config
+
 # compiled output
 /dist
 /tmp

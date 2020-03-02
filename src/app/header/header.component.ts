@@ -1,3 +1,4 @@
+import { ConfigService } from './../config.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  public cfg: any = {};
+
+  constructor(
+    private config: ConfigService
+  ) { 
+    this.cfg = this.config.header;
+  }
 
   ngOnInit() {
   }

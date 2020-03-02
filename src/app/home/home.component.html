@@ -13,18 +13,7 @@
               <h2>Reserve your spot today!</h2>
             </div>
             <div class="clearfix visible-sm"></div>
-            <div class="col-md-4">
-              <p class="mt-10">
-                <a href="#contact" offset="125" class="btn btn-animated btn-lg btn-gray-transparent ">
-                  <!-- Begin Editable Call to Action Text -->
-
-                  Make a Reservation
-
-                  <!-- End editable CTA text -->
-                  <i class="fa fa-envelope pl-20"></i>
-                </a>
-              </p>
-            </div>
+            <div class="col-md-4 mt-10" [innerHTML]="intro.cta"></div>
           </div>
         </div>
       </div>
@@ -38,51 +27,21 @@
   <div class="container">
     <div class="row">
       <div class="main col-md-12">
-        <h3 class="title">
-
-          <!-- Editable Title -->
-          A New Way <strong class="text-info">To Train</strong>
-          <!-- end Title edit-->
-
-        </h3>
+        <h3 class="title" [innerHTML]="intro.header"></h3>
         <div class="separator-2"></div>
         <div class="row">
           <div class="col-md-6">
-            <p class="lead">
-
-              <!-- Editable Paragraph -->
-              Located in the <strong>Lakes Region of New Hampshire</strong>, <span class="text-red">Beyond the Belt</span> is a family focused school teaching the very latest martial arts techniques. Our Adult Mixed Martial Arts
-              Program is one of the only belt-ranked MMA programs in the state. We feature Brazilian Jiu Jitsu, Muay Thai Kickboxing, and traditional Kempo Karate training. Our Martial Arts Leadership Program for children not
-              only teaches valuable Martial Arts techniques and skills, but also life skills, self defense, and character development. Our calorie burning K-Box Fitness Program is one of the most effective and enjoyable ways
-              to get in shape or take your cardio fitness to the next level!
-              <!-- End editable Paragraph-->
-
-            </p>
-            <p class="lead">
-
-              <!-- Editable Paragraph -->
-              Whether you're looking for yourself or your children, whether you have a black belt or have never set foot in a karate studio before, come visit us at Beyond the Belt and see what we're all about!
-              <!-- End Editable Paragraph -->
-
-            </p>
+            <p class="lead" [innerHTML]="intro.intro"></p>
           </div>
           <div class="col-md-6">
             <div class="pv-20 ph-20 feature-box bordered shadow text-center" data-animation-effect="slideInRight" data-effect-delay="600">
 
               <!-- Right-side Image -->
-              <img class="img img-responsive" width="100%" src="https://aethercode-btbmartialarts.s3.amazonaws.com/assets/contentPages/1/image-gallery/564253a39d708.jpg" />
-              <!-- -->
+              <img class="img img-responsive" width="100%" [src]="intro.rightImageUrl" />
 
             </div>
 
-            <!-- Editable Unordered List -->
-            <ul class="list-icons ph-30">
-              <li><i class="fa fa-fw fa-map-marker"></i> Located in <strong>Laconia</strong></li>
-              <li><i class="fa fa-fw fa-star"></i> Community focused, belt-ranked martial arts programs</li>
-              <li><i class="fa fa-fw fa-group"></i> Experienced and <strong class="text-info">passionate</strong> instructors</li>
-              <li><i class="fa fa-fw fa-heartbeat"></i> Safe and welcoming for all walks of life</li>
-            </ul>
-            <!-- End UL -->
+            <section [innerHTML]="intro.rightList"></section>
 
           </div>
         </div>
@@ -121,25 +80,7 @@
   <div class="">
     <div class="container">
       <div class="row">
-        <div class="col-lg-12 form-horizontal"><br />
-          <h1 class="page-title text-center">
-
-            <!-- Editable Title -->
-            <i class="fa fa-fw fa-group pull-left"></i> BTB Staff</h1>
-          <!-- End title -->
-
-          <hr class="tagline-divider">
-          <p class="lead">
-
-            <!-- Editable intro text -->
-            When Sensei Carl Young opened the doors of Beyond the Belt back in 2010, he was on a mission to change the vision of martial arts. Instead of focusing on competitive striking and self defense work, he wanted to create a community of families set on bettering
-            themselves not simply through self defense, but through character building and virtues. In a world where martial arts can easily become something for oneself only, Sensei Carl seeks to teach students that through martial
-            arts, each person has the opportunity to lead and empower each other. Truly, martial arts can go far beyond punches and kicks, organically providing a way for kids and adults alike to better themselves. At Beyond the
-            Belt, it is Sensei Carl's and his team of instructors' mission to teach the very latest techniques, inspirations, and values of martial arts in and beyond the dojo. Don't wait- join the movement today!
-            <!-- end intro text -->
-
-          </p>
-          <div class="clearfix"></div>
+        <div class="col-lg-12 form-horizontal">
           <app-instructors></app-instructors>
         </div>
       </div>
@@ -201,39 +142,7 @@
           </div>
         </div>
         <div class="col-sm-5 col-sm-offset-1 col-md-offset-0 col-xs-10 col-xs-offset-1">
-          <div class="" data-animation-effect="slideInRight">
-            <p>
-              <b class="text-red">HEADQUARTERS </b><br><br />
-              <!-- businessAddress populated from Backend DB (Settings) -->
-              77 Court St. Laconia, NH 03246
-              <!-- -->
-            </p>
-            <dl>
-              <dt>Hours of Operation</dt>
-              <dd>Mon-Thu: 3:30PM – 8PM<br /> Fri: 4:00PM – 6:30PM<br /> Sat: Varies, check with instructor<br />
-                <br />
-                <i class="fa fa-fw fa-phone"></i> 603.366.1044
-              </dd>
-            </dl>
-            <dl>
-              <dt>Directions from the North</dt>
-              <dd>
-                Take US-3 South to NH 106. Turn right onto Veterans Sq/NH-106. Continue to follow NH-106. Turn right onto S Main St/NH-106. Take the first right into Court Street.
-              </dd>
-            </dl>
-            <dl>
-              <dt>Directions from the South</dt>
-              <dd>
-                Take US-3 North. Court Street will be on the left.
-              </dd>
-            </dl>
-            <dl>
-              <dt>Parking</dt>
-              <dd>
-                Limited parking is available in the lot adjacent to the building, and additional parking is available in the lot down behind Walgreens.
-              </dd>
-            </dl>
-          </div>
+          <div class="" data-animation-effect="slideInRight" [innerHTML]="contact.detail"></div>
 
           <!-- Insert FB Box (API) -->
           <div class="fb-page" data-width="500" data-href="https://www.facebook.com/beyond.the.belt" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"></div>

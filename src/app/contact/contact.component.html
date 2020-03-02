@@ -1,26 +1,9 @@
 <section>
-  <div class="jumbotron animated flipInX" [hidden]="!submitted">
-    <h2>Thank you for your submission!</h2>
-    <p>We will be in touch shortly.</p>
-  </div>
+  <div class="jumbotron animated flipInX" [hidden]="!submitted" [innerHTML]="cfg.submissionResponse"></div>
   <div class="panel form-horizontal" [hidden]="submitted">
-    <h2 class="brand-before">
-
-      <!-- Editable title -->
-      Contact <strong>Us</strong>
-      <!-- end title -->
-
-    </h2>
+    <h2 class="brand-before" [innerHTML]="cfg.header"></h2>
     <div class="separator"></div><br />
-    <p>
-
-      <!-- Editable Contact text -->
-      Located at 77 Court Street in Downtown Laconia, our state of the art facility features 2 full size dojos, a spacious, well lit lobby, and 3 different changing rooms. Stadium seating is available for Dojo A, while Dojo B features wrap around seating that
-      allows parents and guests to watch classes comfortably. In addition, we also sport a large selection of Beyond the Belt merchandise and training gear in our Pro Shop! Don't wait! Come check out our facility
-      TODAY!
-      <!-- End text edit -->
-
-    </p>
+    <p [innerHTML]="cfg.intro"></p>
     <form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
       <fieldset>
         <div class="form-group">

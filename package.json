@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --disable-host-check & serverless offline",
+    "start": "npm run build:config && ng serve --disable-host-check & serverless offline",
     "build": "ng build",
-    "deploy": "ng build --prod && serverless deploy",
+    "build:config": "rm -rf src/compiled-config && ts-node build",
+    "deploy": "npm run build:config &&  ng build --prod && serverless deploy",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -53,6 +54,9 @@
     "serverless-s3-sync": "^1.10.2",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.5.3",
+    "js-yaml": "^3.13.1",
+    "merge-deep": "^3.0.2",
+    "recursive-readdir": "^2.2.2"
   }
 }

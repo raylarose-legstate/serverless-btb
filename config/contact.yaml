@@ -1,0 +1,38 @@
+header: Contact <strong>Us</strong>
+intro: |
+  Located at 77 Court Street in Downtown Laconia, our state of the art facility features 2 full size dojos, a spacious, well lit lobby, and 3 different changing rooms. Stadium seating is available for Dojo A, while Dojo B features 
+  wrap around seating that allows parents and guests to watch classes comfortably. In addition, we also sport a large selection of Beyond the Belt merchandise and training gear in our Pro Shop! Don't wait! Come check out our 
+  facility TODAY!
+submissionResponse: |
+  <h2>Thank you for your submission!</h2>
+  <p>We will be in touch shortly.</p>
+detail: |
+  <p>
+    <b class="text-red">HEADQUARTERS </b><br><br />
+    77 Court St. Laconia, NH 03246
+  </p>
+  <dl>
+    <dt>Hours of Operation</dt>
+    <dd>Mon-Thu: 3:30PM – 8PM<br /> Fri: 4:00PM – 6:30PM<br /> Sat: Varies, check with instructor<br />
+      <br />
+      <i class="fa fa-fw fa-phone"></i> 603.366.1044
+    </dd>
+  </dl>
+  <dl>
+    <dt>Directions from the North</dt>
+    <dd>
+      Take US-3 South to NH 106. Turn right onto Veterans Sq/NH-106. Continue to follow NH-106. Turn right onto S Main St/NH-106. Take the first right into Court Street.
+    </dd>
+  </dl>
+  <dl>
+    <dt>Directions from the South</dt>
+    <dd>
+      Take US-3 North. Court Street will be on the left.
+    </dd>
+  </dl>
+  <dl>
+    <dt>Parking</dt>
+    <dd>
+      Limited parking is available in the lot adjacent to the building, and additional parking is available in the lot down behind Walgreens.
+    </dd>
+  </dl>
