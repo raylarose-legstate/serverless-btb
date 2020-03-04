@@ -6,7 +6,8 @@
     "start": "npm run build:config && ng serve --disable-host-check & serverless offline",
     "build": "ng build",
     "build:config": "rm -rf src/compiled-config && ts-node build",
-    "deploy": "npm run build:config &&  ng build --prod && serverless deploy",
+    "cache:invalidate": "aws cloudfront create-invalidation --distribution-id E3JYD8ZYWKFRH9 --paths '/*'",
+    "deploy": "npm run build:config && ng build --prod && serverless deploy && npm run cache:invalidate",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

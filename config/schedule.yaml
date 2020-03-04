@@ -19,7 +19,7 @@ days:
       <span class="bg-purple small"><strong>5:30p-6:15p</strong> Beginner Junior</span>
       <span class="bg-orange small"><strong>5:30p-6:15p</strong> Beginner / Advanced Teen</span>
       <span class="bg-red small"><strong>6:15p-7p</strong> BTB Teen Elite</span>
-      <span class="bg-navy small"><strong>6:15p-7p</strong> Adult Mixed Martial Arts</span>
+      <span class="bg-navy small"><strong>6:15p-7:15p</strong> Adult Mixed Martial Arts</span>
   - name: Wednesday
     classes: |
       <span class="bg-aqua small"><strong>4p-4:45p</strong> Advanced Junior</span>
@@ -27,7 +27,7 @@ days:
       <span class="bg-aqua small"><strong>5:30p-6:30p</strong> Advanced Junior</span>
       <span class="bg-blue small"><strong>5:30p-6:15p</strong> Junior Teen</span>
       <span class="bg-orange small"><strong>6:15p-7p</strong> Beginner / Advanced Teen</span>
-      <span class="bg-navy small"><strong>6:15p-7p</strong> Adult Mixed Martial Arts</span>
+      <span class="bg-navy small"><strong>6:15p-7:15p</strong> Adult Mixed Martial Arts</span>
   - name: Thursday
     classes: |
       <span class="bg-purple small"><strong>4p-4:45p</strong> Beginner Junior</span>
@@ -36,7 +36,7 @@ days:
       <span class="bg-purple small"><strong>5:30p-6:15p</strong> Beginner Junior</span>
       <span class="bg-orange small"><strong>5:30p-6:15p</strong> Beginner / Advanced Teen</span>
       <span class="bg-red small"><strong>6:15p-7p</strong> BTB Teen Elite</span>
-      <span class="bg-navy small"><strong>7p-8p</strong> Adult Mixed Martial Arts</span>
+      <span class="bg-navy small"><strong>6:15p-7:15p</strong> Adult Mixed Martial Arts</span>
   - name: Friday
     classes: |
       <span class="bg-aqua small"><strong>5:30p-6:15p</strong> Advanced Junior</span>
