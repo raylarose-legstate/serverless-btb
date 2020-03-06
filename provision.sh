@@ -31,3 +31,4 @@ sudo chown -R 1000:1000 "/home/vagrant/.npm"
 
 cd /var/www/
 npm install
+npm --prefix api install
