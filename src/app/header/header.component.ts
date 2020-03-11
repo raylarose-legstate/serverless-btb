@@ -10,6 +10,8 @@ export class HeaderComponent implements OnInit {
 
   public cfg: any = {};
 
+  public collapsed = true;
+
   constructor(
     private config: ConfigService
   ) { 

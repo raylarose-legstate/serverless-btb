@@ -3,11 +3,12 @@
   
   section.days {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 
     > div {
       margin: 5px 10px;
-      width: 100%;
+      min-width: 175px;
     }
 
     .schedule-day span {

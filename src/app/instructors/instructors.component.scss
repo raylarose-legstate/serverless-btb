@@ -2,10 +2,15 @@ section {
 
   section.staff {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
   }
   
   img {
     height: 300px;
+  }
+
+  .overlay-container div {
+    margin: auto;
   }
 }

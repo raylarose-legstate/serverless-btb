@@ -1,12 +1,14 @@
 <ng-template #instTemplate let-staff>
   <a href="javascript:void(0)" (click)="selected = staff">
-    <div class="image-box shadow text-center mb-20 animated flipInX">
+    <div class="image-box text-center mb-20 animated flipInX">
       <div class="overlay-container overlay-visible">
-        <img [src]="staff.headerImageUrl" alt="">
-        <div class="overlay-bottom">
-          <div class="text">
-            <strong class="lead">{{staff.title}}</strong><br />
-            <strong class="text-orange margin-clear">{{staff.blurb}}</strong>
+        <div>
+          <img [src]="staff.headerImageUrl" alt="">
+          <div class="overlay-bottom">
+            <div class="text">
+              <strong class="lead">{{staff.title}}</strong><br />
+              <strong class="text-orange margin-clear">{{staff.blurb}}</strong>
+            </div>
           </div>
         </div>
       </div>
@@ -49,11 +51,11 @@
   <div class="instructor-long">
     <div class="container-fluid animated slideInRight">
       <div class="row">
-        <div class="col-xs-8">
+        <div class="col-md-8">
           <button id="instr-top" class="btn btn-xs btn-info btn-animated animated slideInLeft" (click)="selected=null"><i class="fa fa-fw fa-arrow-circle-left"></i> Back</button><br /><br />
           <div [innerHTML]="selected.content"></div>
         </div>
-        <div class="col-xs-4">
+        <div class="col-md-4">
           <img class="img img-responsive img-thumbnail" [src]="selected.headerImageUrl" alt=""><br /><br />
           <div class="body">
             <h3 class="title margin-clear" [innerHTML]="selected.title"></h3>

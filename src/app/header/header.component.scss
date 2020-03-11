@@ -1,0 +1,12 @@
+header {  
+  position: fixed !important;
+  background-color: rgba(57, 57, 57, 1) !important;
+
+  div.header-right nav.navbar {
+    width: inherit !important;
+  }
+
+  button.navbar-toggle {
+    padding-bottom: 19px;
+  }
+}
